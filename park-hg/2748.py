@@ -4,6 +4,7 @@ sys.stdin = open('input.txt')
 
 n = int(sys.stdin.readline())
 
+
 @lru_cache(None)
 def rec(n):
     if n == 0:

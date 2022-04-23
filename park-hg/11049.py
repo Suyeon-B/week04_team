@@ -9,13 +9,12 @@ for _ in range(N):
     r += R,
     c += C,
 
-dp = [[1e9]*N for _ in range(N)]
+dp = [[1<<31]*N for _ in range(N)]
+for i in range(N):
+    dp[i][i] = 0
+for j in range(N):
+    for i in range(N-j):
+        for k in range(j):
+            dp[i][i+j] = min(dp[i][i+j], dp[i][i+k]+dp[i+k+1][i+j]+r[i]*r[i+k+1]*c[i+j])
 
-for i in range(N-1):
-    dp[i][i+1] = r[i]*r[i+1]*c[i+1]
-
-for k in range(1, N):
-    for i in range(N-k):
-        dp[i][i+k] = min(dp[i][i+k], )
-
-print(dp)
+print(dp[0][-1])
