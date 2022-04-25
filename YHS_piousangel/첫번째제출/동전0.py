@@ -10,7 +10,7 @@ coin_list = []
 for i in range(n):
     coin_list.append(int(input()))
 
-coin_list.sort(reverse = True)
+coin_list.sort(reverse = True)              # 큰 코인들이 작은 코인들의 배수이기 때문에 그리디 알고리즘을 적용할 수 있다.(무조건 큰것이 작은 걸로 나누어 떨어지기때문에 최소값을 구할 수 있는거죠)
 
 
 #항상 그 순간에 최선을 다하는 알고리즘
