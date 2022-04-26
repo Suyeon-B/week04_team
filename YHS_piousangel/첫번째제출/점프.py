@@ -9,7 +9,8 @@ for _ in range(M):
     stone = int(input().rstrip())
     if stone not in stone_list:
         stone_list.append(stone)
-arr = [[10001]* (int((2*N)**0.5)+2) for _ in range(N+1)]  #[i for i in range(N+1)] #한칸뛰기로 갈수있음으로 갈수있는 경우의 수 0
+        
+arr = [[10001]* (int((2*N)**0.5)+2) for _ in range(N+1)] 
 
 arr[1][0] = 0
 
